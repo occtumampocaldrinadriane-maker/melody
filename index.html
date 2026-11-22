@@ -11,22 +11,44 @@
 
 <body>
 
-    <!-- THEME TOGGLE -->
-    <button id="themeToggle" class="theme-toggle">
-        🌙 Night Mode
-    </button>
+    <!-- =================================
+         GARDEN NAVIGATION BAR
+    ================================== -->
 
-    <!-- MUSIC BUTTON -->
-    <button id="musicToggle" class="music-toggle">
-        🎵 Play Music
-    </button>
+    <nav class="garden-toolbar">
 
-    <!-- BACKGROUND MUSIC -->
+        <button id="musicToggle" class="music-toggle">
+            🎵 Music
+        </button>
+
+        <button id="themeToggle" class="theme-toggle">
+            🌙 Night
+        </button>
+
+        <button id="sunsetToggle" class="sunset-toggle">
+            🌅 Sunset
+        </button>
+
+        <button id="rainToggle" class="rain-toggle">
+            🌧️ Rain
+        </button>
+
+    </nav>
+
+
+    <!-- =================================
+         BACKGROUND MUSIC
+    ================================== -->
+
     <audio id="backgroundMusic" loop>
         <source src="assests/music/garden-music.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- WELCOME SCREEN -->
+
+    <!-- =================================
+         WELCOME SCREEN
+    ================================== -->
+
     <main class="welcome-screen" id="welcomeScreen">
 
         <div class="welcome-content">
@@ -50,27 +72,40 @@
     </main>
 
 
-    <!-- GARDEN SCREEN -->
+    <!-- =================================
+         GARDEN SCREEN
+    ================================== -->
+
     <section class="garden-screen" id="gardenScreen">
 
         <!-- FALLING PETALS -->
         <div class="petal-container" id="petalContainer"></div>
 
+        <!-- RAIN EFFECT -->
+        <div class="rain-container" id="rainContainer"></div>
+
+        <!-- TWINKLING NIGHT STARS -->
+        <div class="star-container" id="starContainer"></div>
+
+        <!-- SUN / MOON -->
         <div class="sun"></div>
 
 
         <!-- FLOATING BUTTERFLIES -->
+
         <div class="butterfly butterfly-one">🦋</div>
         <div class="butterfly butterfly-two">🦋</div>
         <div class="butterfly butterfly-three">🦋</div>
 
 
         <!-- FLYING BIRDS -->
+
         <div class="flying-bird flying-bird-one">🐦</div>
         <div class="flying-bird flying-bird-two">🕊️</div>
 
 
         <!-- GARDEN HEADING -->
+
         <div class="garden-heading">
 
             <p>A LITTLE WORLD OF ITS OWN</p>
@@ -83,6 +118,7 @@
 
 
         <!-- HILLS -->
+
         <div class="hills">
 
             <div class="hill hill-back"></div>
@@ -91,20 +127,26 @@
         </div>
 
 
-        <!-- GARDEN GROUND -->
+        <!-- =================================
+             GARDEN GROUND
+        ================================== -->
+
         <div class="garden-ground">
 
             <!-- TREES -->
+
             <div class="tree tree-one">🌳</div>
             <div class="tree tree-two">🌲</div>
 
 
             <!-- BIRDS -->
+
             <div class="bird bird-one">🐦</div>
             <div class="bird bird-two">🕊️</div>
 
 
             <!-- FLOWERS -->
+
             <button class="flower flower-one"
                 data-message="Even the smallest flowers can make an ordinary day feel special. 🌼"
                 aria-label="Discover flower one">
@@ -137,7 +179,9 @@
 
 
             <!-- GARDEN CAT -->
-            <button class="garden-cat" id="gardenCat" aria-label="Pet the garden cat">
+
+            <button class="garden-cat" id="gardenCat"
+                aria-label="Pet the garden cat">
 
                 <span id="catEmoji">🐈</span>
 
@@ -145,12 +189,15 @@
 
             <div class="cat-message" id="catMessage">
 
-                <p id="catMessageText">Meow! Hello there! 🐾</p>
+                <p id="catMessageText">
+                    Meow! Hello there! 🐾
+                </p>
 
             </div>
 
 
             <!-- HIDDEN SWEETS -->
+
             <button class="sweet sweet-one"
                 data-message="A little sweetness for someone who makes ordinary moments special. 🍬">
                 🍬
@@ -173,47 +220,55 @@
 
 
             <!-- GARDEN NOTE -->
+
             <p class="garden-note">
                 Sometimes, the simplest places hold the sweetest things.
             </p>
 
 
-            <!-- HIDDEN GARDEN SURPRISE -->
-<button id="secretBottle" class="secret-bottle"
-    aria-label="Discover a hidden surprise">
-    🧴
-</button>
+            <!-- =================================
+                 HIDDEN GARDEN SURPRISE
+            ================================== -->
 
-<div class="secret-message" id="secretMessage">
+            <button id="secretBottle" class="secret-bottle"
+                aria-label="Discover a hidden surprise">
+                🧴
+            </button>
 
-    <div class="secret-card">
+            <div class="secret-message" id="secretMessage">
 
-        <button id="closeSecret" class="secret-close"
-            aria-label="Close surprise">
-            ×
-        </button>
+                <div class="secret-card">
 
-        <span class="secret-icon">✨</span>
+                    <button id="closeSecret" class="secret-close"
+                        aria-label="Close surprise">
+                        ×
+                    </button>
 
-        <p>A LITTLE SECRET DISCOVERY</p>
+                    <span class="secret-icon">✨</span>
 
-        <h3>Something Just for You</h3>
+                    <p>A LITTLE SECRET DISCOVERY</p>
 
-        <p>
-            You found a little surprise hidden in this garden!
-            May you always find little reasons to smile,
-            even on the most ordinary days.
-        </p>
+                    <h3>Something Just for You</h3>
 
-        <span class="secret-flower">🌷</span>
+                    <p>
+                        You found a little surprise hidden in this garden!
+                        May you always find little reasons to smile,
+                        even on the most ordinary days.
+                    </p>
 
-    </div>
+                    <span class="secret-flower">🌷</span>
 
-</div>
+                </div>
+
+            </div>
+
         </div>
 
 
-        <!-- FLOWER MESSAGE CARD -->
+        <!-- =================================
+             FLOWER MESSAGE CARD
+        ================================== -->
+
         <div class="message-card" id="messageCard">
 
             <button class="close-message" id="closeMessage"
@@ -230,7 +285,10 @@
         </div>
 
 
-        <!-- MELODY'S LITTLE LETTER BUTTON -->
+        <!-- =================================
+             MELODY'S LITTLE LETTER
+        ================================== -->
+
         <div class="letter-entry">
 
             <button id="openLetter" class="letter-button" type="button">
@@ -241,6 +299,7 @@
 
 
         <!-- LETTER POPUP -->
+
         <div class="letter-overlay" id="letterOverlay">
 
             <div class="letter-card">
@@ -284,7 +343,10 @@
     </section>
 
 
-    <!-- JAVASCRIPT -->
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
     <script src="js/script.js"></script>
 
 </body>

@@ -271,3 +271,96 @@ sunsetToggle.addEventListener("click", function () {
     }
 
 });
+
+
+// =================================
+// RAINY GARDEN MODE
+// =================================
+
+const rainToggle = document.getElementById("rainToggle");
+const rainContainer = document.getElementById("rainContainer");
+
+let rainActive = false;
+
+function createRain() {
+
+    rainContainer.innerHTML = "";
+
+    for (let i = 0; i < 120; i++) {
+
+        const drop = document.createElement("span");
+
+        drop.classList.add("raindrop");
+
+        drop.style.left = Math.random() * 100 + "%";
+
+        drop.style.animationDuration =
+            (0.6 + Math.random() * 0.7) + "s";
+
+        drop.style.animationDelay =
+            (Math.random() * 3) + "s";
+
+        drop.style.opacity =
+            (0.3 + Math.random() * 0.7);
+
+        drop.style.height =
+            (15 + Math.random() * 20) + "px";
+
+        rainContainer.appendChild(drop);
+
+    }
+
+}
+
+rainToggle.addEventListener("click", function () {
+
+    rainActive = !rainActive;
+
+    document.body.classList.toggle("rainy-mode", rainActive);
+
+    if (rainActive) {
+
+        createRain();
+
+        rainToggle.textContent = "☀️ Stop Rain";
+
+    } else {
+
+        rainToggle.textContent = "🌧️ Rainy Day";
+
+    }
+
+});
+
+// =================================
+// TWINKLING NIGHT STARS
+// =================================
+
+const starContainer = document.getElementById("starContainer");
+
+// CREATE STARS
+
+for (let i = 0; i < 100; i++) {
+
+    const star = document.createElement("span");
+
+    star.classList.add("star");
+
+    // RANDOM STAR POSITION
+
+    star.style.left = Math.random() * 100 + "%";
+    star.style.top = Math.random() * 100 + "%";
+
+    // RANDOM TWINKLING SPEED
+
+    star.style.animationDuration =
+        (1 + Math.random() * 3) + "s";
+
+    // RANDOM ANIMATION DELAY
+
+    star.style.animationDelay =
+        Math.random() * 3 + "s";
+
+    starContainer.appendChild(star);
+
+}
