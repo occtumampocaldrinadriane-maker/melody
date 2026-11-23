@@ -364,3 +364,158 @@ for (let i = 0; i < 100; i++) {
     starContainer.appendChild(star);
 
 }
+
+
+
+
+// STORYBOOK SCROLL REVEAL
+
+const storySections = document.querySelectorAll(".story-section");
+
+const storyObserver = new IntersectionObserver(
+    function (entries) {
+
+        entries.forEach(function (entry) {
+
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.25
+    }
+);
+
+storySections.forEach(function (section) {
+    storyObserver.observe(section);
+});
+
+
+
+
+
+
+// =====================================
+// THE LITTLE MEMORY JAR
+// =====================================
+
+const memoryJar = document.getElementById("memoryJar");
+const memoryOverlay = document.getElementById("memoryOverlay");
+const closeMemory = document.getElementById("closeMemory");
+const memoryMessage = document.getElementById("memoryMessage");
+const anotherMemory = document.getElementById("anotherMemory");
+
+// Little messages inside the jar
+
+const memoryMessages = [
+
+    "Some people make ordinary days feel a little more special. 🌷",
+
+    "Never forget that you deserve kindness, happiness, and peace. 💗",
+
+    "Even the smallest steps forward are worth celebrating. 🌱",
+
+    "May you always find something beautiful in every new day. 🌼",
+
+    "The world is a little brighter because of the good things you bring into it. ✨",
+
+    "Remember to give yourself the same kindness you give to others. 🦋",
+
+    "Some of life's sweetest moments are the ones we never planned. 🌸",
+
+    "Keep dreaming, keep growing, and never stop believing in yourself. 🌻",
+
+    "You are allowed to take your time. Beautiful things grow slowly. 🌿",
+
+    "May your days be filled with little reasons to smile. ☀️"
+
+];
+
+// Keep track of previously displayed messages
+
+let remainingMemories = [];
+
+function getRandomMemory() {
+
+    // Refill the list when all messages have been displayed
+
+    if (remainingMemories.length === 0) {
+
+        remainingMemories = [...memoryMessages];
+
+    }
+
+    const randomIndex = Math.floor(
+        Math.random() * remainingMemories.length
+    );
+
+    return remainingMemories.splice(randomIndex, 1)[0];
+
+}
+
+
+// Display a random memory
+
+function showMemory() {
+
+    memoryMessage.textContent = getRandomMemory();
+
+}
+
+
+// Open the memory jar
+
+memoryJar.addEventListener("click", function () {
+
+    memoryOverlay.classList.add("active");
+
+    showMemory();
+
+});
+
+
+// Show another memory
+
+anotherMemory.addEventListener("click", function () {
+
+    showMemory();
+
+});
+
+
+// Close the memory jar
+
+closeMemory.addEventListener("click", function () {
+
+    memoryOverlay.classList.remove("active");
+
+});
+
+
+// Close when clicking outside the card
+
+memoryOverlay.addEventListener("click", function (event) {
+
+    if (event.target === memoryOverlay) {
+
+        memoryOverlay.classList.remove("active");
+
+    }
+
+});
+
+
+// Close using Escape key
+
+document.addEventListener("keydown", function (event) {
+
+    if (event.key === "Escape") {
+
+        memoryOverlay.classList.remove("active");
+
+    }
+
+});

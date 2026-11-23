@@ -49,27 +49,114 @@
          WELCOME SCREEN
     ================================== -->
 
-    <main class="welcome-screen" id="welcomeScreen">
+<!-- STORYBOOK WELCOME SCREEN -->
+<main class="welcome-screen" id="welcomeScreen">
 
-        <div class="welcome-content">
+    <div class="story-page">
 
-            <p class="eyebrow">A LITTLE PLACE OF PEACE</p>
+        <!-- CHAPTER 1: OPENING -->
+        <section class="story-section opening-section">
+            <p class="story-label">A LITTLE STORY FOR YOU</p>
 
-            <h1>Melody's Little Garden</h1>
+            <h1>
+                Somewhere between<br>
+                a moment and forever...
+            </h1>
 
-            <p class="subtitle">
-                A little world filled with flowers, sweetness,
-                and things worth remembering.
+            <p class="story-description">
+                There was a little story waiting to be told.
+            </p>
+
+            <span class="scroll-indicator">↓</span>
+        </section>
+
+
+        <!-- CHAPTER 2: THE BEGINNING -->
+        <section class="story-section">
+            <p class="story-number">01 — THE BEGINNING</p>
+
+            <h2>
+                "Stay," she whispered.
+            </h2>
+
+            <p class="story-description">
+                As if the world could pause for just a little longer.
+            </p>
+        </section>
+
+
+        <!-- CHAPTER 3: THE QUESTION -->
+        <section class="story-section">
+            <p class="story-number">02 — THE QUESTION</p>
+
+            <h2>
+                "For how long?" he asked.
+            </h2>
+
+            <p class="story-description">
+                Though perhaps he already knew the answer.
+            </p>
+        </section>
+
+
+        <!-- CHAPTER 4: THE ANSWER -->
+        <section class="story-section">
+            <p class="story-number">03 — THE ANSWER</p>
+
+            <h2>
+                "Would forever be too much to ask?"
+            </h2>
+
+            <p class="story-description">
+                She asked, hoping that some moments were meant
+                to last beyond the passing of time.
+            </p>
+        </section>
+
+
+        <!-- CHAPTER 5: THE LAST LINE -->
+        <section class="story-section ending-section">
+            <p class="story-number">04 — THE LAST LINE</p>
+
+            <h2>
+                "Seems too short."
+            </h2>
+
+            <p class="story-description">
+                And perhaps, some things are simply too precious
+                for time to measure.
+            </p>
+        </section>
+
+
+        <!-- FINAL SECTION: ENTER THE GARDEN -->
+        <section class="story-section invitation-section">
+
+            <p class="story-label">AND NOW...</p>
+
+            <h2>
+                A little place<br>
+                just for you.
+            </h2>
+
+            <p class="story-description">
+                A garden filled with little surprises,
+                gentle moments, and things worth remembering.
             </p>
 
             <button id="enterButton">
-                ENTER THE GARDEN
-                <span>→</span>
+                ENTER THE GARDEN <span>→</span>
             </button>
 
-        </div>
+            <p class="story-signature">
+                Made with a little thought and care. 🌷
+            </p>
 
-    </main>
+        </section>
+
+    </div>
+
+</main>
 
 
     <!-- =================================
@@ -219,6 +306,97 @@
             </button>
 
 
+            <!-- =================================
+     THE LITTLE MEMORY JAR
+================================== -->
+
+<button id="memoryJar" class="memory-jar"
+    aria-label="Open the little memory jar">
+
+    🫙
+
+    <span class="jar-label">Little Memories</span>
+
+</button>
+
+<!-- MELODY'S LITTLE LETTER JAR -->
+<button id="letterJar" class="letter-jar"
+    aria-label="Open the little letter jar">
+
+    💌
+    <span class="letter-jar-label">Leave a Letter</span>
+
+</button>
+
+
+<!-- LETTER JAR POPUP -->
+<div class="letter-jar-overlay" id="letterJarOverlay">
+
+    <div class="letter-jar-card">
+
+        <button id="closeLetterJar" class="letter-jar-close">
+            ×
+        </button>
+
+        <span class="letter-jar-icon">💌</span>
+
+        <p class="letter-jar-subtitle">
+            A LITTLE SPACE FOR YOUR THOUGHTS
+        </p>
+
+        <h3>A Letter for the Garden</h3>
+
+        <p class="letter-jar-description">
+            Whatever is on your mind, you can leave it here.
+            Every thought has a place in this little garden.
+        </p>
+
+        <textarea
+            id="letterText"
+            placeholder="Write whatever you'd like to say..."
+            maxlength="2000"
+        ></textarea>
+
+        <button id="sendLetter">
+            Leave My Letter 🌷
+        </button>
+
+        <p id="letterStatus" class="letter-status"></p>
+
+    </div>
+
+</div>
+
+
+<!-- MEMORY JAR POPUP -->
+
+<div class="memory-overlay" id="memoryOverlay">
+
+    <div class="memory-card">
+
+        <button id="closeMemory" class="memory-close"
+            aria-label="Close memory jar">
+            ×
+        </button>
+
+        <span class="memory-icon">✨</span>
+
+        <p class="memory-subtitle">A LITTLE SOMETHING TO REMEMBER</p>
+
+        <h3>A Jar Full of Little Thoughts</h3>
+
+        <p id="memoryMessage">
+            Every little moment deserves to be remembered.
+        </p>
+
+        <button id="anotherMemory">
+            Another Little Thought 🌷
+        </button>
+
+    </div>
+
+</div>
+
             <!-- GARDEN NOTE -->
 
             <p class="garden-note">
@@ -348,6 +526,8 @@
     ================================== -->
 
     <script src="js/script.js"></script>
+
+    <script type="module" src="js/letter-jar.js"></script>
 
 </body>
 
