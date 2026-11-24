@@ -1,0 +1,127 @@
+<script src="js/script.js"></script><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Little Letter Inbox 💌</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+    <main class="admin-container">
+
+        <!-- LOGIN SECTION -->
+        <section id="loginSection" class="login-section">
+
+            <div class="envelope">💌</div>
+
+            <p class="subtitle">A LITTLE PRIVATE CORNER</p>
+
+            <h1>Little Letter Inbox</h1>
+
+            <p>Some words are meant to be kept close.</p>
+
+            <form id="loginForm">
+
+                <input
+                    type="email"
+                    id="adminEmail"
+                    placeholder="Your email address"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="adminPassword"
+                    placeholder="Your password"
+                    required
+                >
+
+                <button type="submit" id="loginButton">
+                    Open My Inbox 🌷
+                </button>
+
+                <p id="loginS<script src="js/script.js"></script>tatus"></p>
+
+            </form>
+
+        </section>
+
+
+        <!-- INBOX SECTION -->
+        <section id="inboxSection" class="inbox-section" hidden>
+
+           <header class="inbox-header">
+
+    <div>
+        <p class="subtitle">YOUR LITTLE COLLECTION</p>
+        <h1>Letters from the Garden 💌</h1>
+    </div>
+
+    <button id="logoutButton">
+        Logout
+    </button>
+
+</header>
+
+<!-- LETTER COUNTER -->
+<div class="inbox-toolbar">
+
+    <div class="letter-counter">
+        <span>💌</span>
+        <div>
+            <strong id="letterCount">0</strong>
+            <p>Little Letters Received</p>
+        </div>
+    </div>
+
+    <button id="refreshLetters">
+        🔄 Refresh Letters
+    </button>
+
+</div>
+
+            <p id="inboxStatus">
+                Loading your letters...
+            </p>
+
+            <div id="letterList" class="letter-list"></div>
+
+        </section>
+
+
+        <!-- LETTER READING POPUP -->
+        <div id="letterModal" class="letter-modal">
+
+            <div class="letter-modal-card">
+
+                <button id="closeLetterModal" class="close-button">
+                    ×
+                </button>
+
+                <span>💌</span>
+
+                <h2>A Little Letter</h2>
+
+                <p id="letterDate"></p>
+
+                <div id="letterContent"></div>
+
+                <button id="deleteLetterButton">
+                    Delete Letter
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script type="module" src="js/admin.js"></script>
+
+</body>
+</html>

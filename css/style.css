@@ -600,7 +600,7 @@ button span {
 }
 
 .flying-bird-one {
-    top: 180px;
+    top: 150px;
     left: -40px;
 }
 
@@ -1105,7 +1105,7 @@ body.dark-mode .letter-close {
 
 .secret-bottle {
     position: absolute;
-    bottom: 35px;
+    bottom: 195px;
     left: 12%;
 
     background: transparent;
@@ -2405,3 +2405,174 @@ body.dark-mode .star-container {
         font-size: 22px;
     }
 }
+
+
+
+.admin-login-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: 1px solid #789477;
+    border-radius: 25px;
+    color: #526b50;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.admin-login-link:hover {
+    background: #dce7d4;
+    transform: translateY(-2px);
+}
+
+
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    .toolbar-container {
+        gap: 6px;
+    }
+
+    .toolbar-container .garden-toolbar {
+        gap: 4px;
+        padding: 6px;
+    }
+
+    .admin-circle {
+        flex-basis: 40px;
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+
+}
+
+
+/* =================================
+   TOOLBAR + ADMIN LOGIN BUTTON
+================================= */
+
+.toolbar-container {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: calc(100% - 24px);
+    max-width: 720px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    z-index: 10000;
+}
+
+/* NAVIGATION BAR */
+
+.toolbar-container .garden-toolbar {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+
+    width: auto;
+    max-width: none;
+    flex: 1;
+    min-width: 0;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+}
+
+/* NAVIGATION BUTTONS */
+
+.toolbar-container .garden-toolbar button {
+    position: static !important;
+    transform: none !important;
+
+    width: 100%;
+    min-width: 0;
+
+    padding: 11px 4px;
+    border: none;
+    border-radius: 12px;
+
+    font-size: 12px;
+    white-space: nowrap;
+
+    background: rgba(255, 255, 255, 0.85);
+    color: #405447;
+}
+
+/* CIRCULAR ADMIN LOGIN */
+
+.toolbar-container .admin-circle {
+    position: relative !important;
+
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+    margin: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    color: #526b50;
+    font-size: 20px;
+    text-decoration: none;
+
+    box-shadow: 0 3px 12px rgba(70, 100, 65, 0.12);
+
+    transition: all 0.3s ease;
+}
+
+.toolbar-container .admin-circle:hover {
+    background: #e4edcf;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(70, 100, 65, 0.2);
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .toolbar-container {
+        gap: 6px;
+        width: calc(100% - 20px);
+    }
+
+    .toolbar-container .garden-toolbar {
+        gap: 4px;
+        padding: 6px;
+    }
+
+    .toolbar-container .garden-toolbar button {
+        font-size: 10px;
+        padding: 10px 2px;
+    }
+
+    .toolbar-container .admin-circle {
+        flex-basis: 40px;
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+}
+
+
+
